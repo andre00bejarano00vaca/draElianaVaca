@@ -1,0 +1,275 @@
+/* Variables de Color */
+:root {
+    --azul-oscuro: #1a2a6c;
+    --dorado: #b89552;
+    --blanco: #ffffff;
+    --gris-claro: #f4f4f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: var(--azul-oscuro);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.065), rgba(31, 31, 32, 0.8)),
+        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.9);       
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--dorado);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background: #9a7b3d;
+}
+
+/* Servicios */
+.services {
+    padding: 80px 10%;
+    background: var(--gris-claro);
+    text-align: center;
+}
+
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--dorado);
+}
+
+/* Formulario */
+.contact {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.services-title {
+    font-size: 3rem;
+    font-family: "Playfair Display", serif;
+    color: var(--azul-oscuro);
+    margin-bottom: 10px;
+}
+
+.services-subtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+    color: #555;
+}
+
+/* Grid */
+.grid-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    margin-top: 60px;
+}
+
+/* Card Grande */
+.service-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+    border-top: 6px solid var(--dorado);
+    min-height: 420px;
+}
+
+/* Hover bonito */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Imagen */
+.service-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+/* Texto */
+.service-card h3 {
+    font-size: 1.6rem;
+    color: var(--azul-oscuro);
+    margin: 20px;
+    font-family: "Playfair Display", serif;
+}
+
+.service-card p {
+    font-size: 1.05rem;
+    margin: 0 20px 25px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.title-line {
+    width: 50%;
+    height: 3px;
+    background: var(--dorado);
+    margin: 15px auto 25px;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Punto decorativo al centro */
+.title-line::after {
+    content: "⚖";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gris-claro);
+    padding: 0 10px;
+    color: var(--dorado);
+    font-size: 18px;
+}
+
+.final-cta {
+  padding: 90px 10%;
+  background: linear-gradient(
+      rgba(26, 42, 108, 0.95),
+      rgba(26, 42, 108, 0.95)
+    ),
+    url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80")
+      no-repeat center/cover;
+  text-align: center;
+  color: white;
+}
+
+.final-cta-box {
+  max-width: 850px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 60px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+  border-top: 5px solid var(--dorado);
+}
+
+.final-cta-box h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.final-cta-box p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 35px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Botón secundario elegante */
+.cta-outline {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid var(--dorado);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--dorado);
+  transition: 0.3s;
+}
+
+.cta-outline:hover {
+  background: var(--dorado);
+  color: white;
+}
